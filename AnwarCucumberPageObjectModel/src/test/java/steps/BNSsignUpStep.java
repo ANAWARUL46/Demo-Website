@@ -16,12 +16,13 @@ public class BNSsignUpStep extends AbstractClass{
 	}
 
 	@When("User will enter {string} in firstname textbox, {string} in lastname textbox, {string} in emil textbox,{string} in password textbox, {string} in phone textbox")
-	public void user_will_enter_in_firstname_textbox_in_lastname_textbox_in_emil_textbox_in_password_textbox_in_phone_textbox(String FN, String LN, String EM, String PW, String PH) {
+	public void user_will_enter_in_firstname_textbox_in_lastname_textbox_in_emil_textbox_in_password_textbox_in_phone_textbox(String FN, String LN, String EM, String PW, String PH) throws InterruptedException {
 	   bnsp.enterFirstName(FN);
 	   bnsp.enterLastName(LN);
 	   bnsp.enterEmail(EM);
 	   bnsp.enterPassword(PW);
 	   bnsp.enterPhone(PH);
+	   Thread.sleep(2000);
 	}
 
 	@When("User will select {string} in month dropdown box, {string} in day dropdown box, {string} in year dropdownbox")
